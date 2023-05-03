@@ -1,0 +1,49 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.16",
+    "heartbeatAt": "2023-05-02T16:36:15.617560",
+    "startedAt": "2023-05-02T16:36:15.093818",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/skylersaucedo/pytorch-retinanet.git",
+        "commit": "65e3570a83e3f25dd4fba92d35efef5efd9f24c5"
+    },
+    "email": "skyler.saucedo@gmail.com",
+    "root": "C:/Users/endle/Desktop/another_shot/pytorch-retinanet",
+    "host": "BLD",
+    "username": "endle",
+    "executable": "c:\\Users\\endle\\miniconda3\\envs\\pytorch-gpu\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3501.0,
+        "min": 0.0,
+        "max": 3501.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3501.0,
+            "min": 0.0,
+            "max": 3501.0
+        }
+    ],
+    "disk": {
+        "total": 930.7470664978027,
+        "used": 923.8724365234375
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 63.89064407348633
+    }
+}

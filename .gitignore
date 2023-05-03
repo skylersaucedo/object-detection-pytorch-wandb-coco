@@ -1,0 +1,7 @@
+*.csv
+*.jpg
+*.xml
+data
+outputdir
+test
+train

@@ -1,0 +1,117 @@
+Namespace(amp=True, aspect_ratio_group_factor=3, batch_size=8, data_augmentation='hflip', data_path='C:\\Users\\endle\\Desktop\\pytorch-retinanet\\data', dataset='coco', device='cuda', dist_url='env://', epochs=3, lr=0.0005, lr_gamma=0.1, lr_scheduler='multisteplr', lr_step_size=8, lr_steps=[16, 22], model='retinanet_resnet50_fpn', momentum=0.9, norm_weight_decay=0.9, opt='sgd', output_dir='C:\\Users\\endle\\Desktop\\pytorch-retinanet\\outputdir', print_freq=20, resume='C:\\Users\\endle\\Desktop\\pytorch-retinanet\\outputdir', rpn_score_thresh=None, start_epoch=0, sync_bn=False, test_only=False, trainable_backbone_layers=None, use_copypaste=False, use_deterministic_algorithms=False, weight_decay=0.0001, weights=None, weights_backbone='ResNet50_Weights.IMAGENET1K_V1', workers=1, world_size=1)
+Not using distributed mode
+what is in args: , Namespace(amp=True, aspect_ratio_group_factor=3, batch_size=8, data_augmentation='hflip', data_path='C:\\Users\\endle\\Desktop\\pytorch-retinanet\\data', dataset='coco', device='cuda', dist_url='env://', distributed=False, epochs=3, lr=0.0005, lr_gamma=0.1, lr_scheduler='multisteplr', lr_step_size=8, lr_steps=[16, 22], model='retinanet_resnet50_fpn', momentum=0.9, norm_weight_decay=0.9, opt='sgd', output_dir='C:\\Users\\endle\\Desktop\\pytorch-retinanet\\outputdir', print_freq=20, resume='C:\\Users\\endle\\Desktop\\pytorch-retinanet\\outputdir', rpn_score_thresh=None, start_epoch=0, sync_bn=False, test_only=False, trainable_backbone_layers=None, use_copypaste=False, use_deterministic_algorithms=False, weight_decay=0.0001, weights=None, weights_backbone='ResNet50_Weights.IMAGENET1K_V1', workers=1, world_size=1)
+Loading data
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+Creating data loaders
+Using [0, 0.5, 0.6299605249474366, 0.7937005259840997, 1.0, 1.2599210498948732, 1.5874010519681994, 2.0, inf] as bins for aspect ratio quantization
+Count of instances per bin: [  3  41 326]
+Creating model
+what is argsresume:  C:\Users\endle\Desktop\pytorch-retinanet\outputdir
+Start training
+c:\Users\endle\miniconda3\envs\pytorch-gpu\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+c:\Users\endle\miniconda3\envs\pytorch-gpu\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=RetinaNet_ResNet50_FPN_Weights.COCO_V1`. You can also use `weights=RetinaNet_ResNet50_FPN_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Epoch: [0]  [ 0/46]  eta: 0:07:57  lr: 0.000012  loss: 2.2369 (2.2369)  classification: 1.5651 (1.5651)  bbox_regression: 0.6718 (0.6718)  time: 10.3899  data: 2.5931  max mem: 10895
+Epoch: [0]  [20/46]  eta: 0:00:29  lr: 0.000234  loss: 2.0464 (2.0221)  classification: 1.3506 (1.3465)  bbox_regression: 0.6839 (0.6757)  time: 0.6918  data: 0.0069  max mem: 11178
+Epoch: [0]  [40/46]  eta: 0:00:05  lr: 0.000456  loss: 1.3079 (1.6929)  classification: 0.7588 (1.0685)  bbox_regression: 0.5690 (0.6244)  time: 0.7017  data: 0.0067  max mem: 11181
+Epoch: [0]  [45/46]  eta: 0:00:00  lr: 0.000500  loss: 1.2549 (1.6320)  classification: 0.6766 (1.0232)  bbox_regression: 0.5390 (0.6088)  time: 0.7036  data: 0.0071  max mem: 11181
+Epoch: [0] Total time: 0:00:42 (0.9169 s / it)
+metric logger avg stats:  lr: 0.000500  loss: 1.2549 (1.6320)  classification: 0.6766 (1.0232)  bbox_regression: 0.5390 (0.6088)
+1.2549 (1.6320)
+Test:  [  0/529]  eta: 0:22:55  model_time: 0.2180 (0.2180)  evaluator_time: 0.0030 (0.0030)  time: 2.6010  data: 2.3781  max mem: 11181
+Test:  [100/529]  eta: 0:00:42  model_time: 0.0643 (0.0698)  evaluator_time: 0.0025 (0.0037)  time: 0.0696  data: 0.0008  max mem: 11181
+Test:  [200/529]  eta: 0:00:28  model_time: 0.0652 (0.0694)  evaluator_time: 0.0030 (0.0037)  time: 0.0710  data: 0.0011  max mem: 11181
+Test:  [300/529]  eta: 0:00:18  model_time: 0.0631 (0.0682)  evaluator_time: 0.0025 (0.0034)  time: 0.0680  data: 0.0010  max mem: 11181
+Test:  [400/529]  eta: 0:00:10  model_time: 0.0624 (0.0669)  evaluator_time: 0.0036 (0.0033)  time: 0.0724  data: 0.0011  max mem: 11181
+Test:  [500/529]  eta: 0:00:02  model_time: 0.0629 (0.0666)  evaluator_time: 0.0030 (0.0032)  time: 0.0676  data: 0.0009  max mem: 11181
+Test:  [528/529]  eta: 0:00:00  model_time: 0.0636 (0.0664)  evaluator_time: 0.0030 (0.0031)  time: 0.0701  data: 0.0011  max mem: 11181
+Test: Total time: 0:00:40 (0.0770 s / it)
+Averaged stats: model_time: 0.0636 (0.0664)  evaluator_time: 0.0030 (0.0031)
+Accumulating evaluation results...
+DONE (t=0.72s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.016
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.046
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.008
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.003
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.138
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.273
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.090
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.285
+Epoch: [1]  [ 0/46]  eta: 0:02:31  lr: 0.000500  loss: 1.2679 (1.2679)  classification: 0.7719 (0.7719)  bbox_regression: 0.4961 (0.4961)  time: 3.2854  data: 2.3994  max mem: 11187
+Epoch: [1]  [20/46]  eta: 0:00:22  lr: 0.000500  loss: 0.9980 (1.0399)  classification: 0.5752 (0.6027)  bbox_regression: 0.4237 (0.4372)  time: 0.7376  data: 0.0068  max mem: 11187
+Epoch: [1]  [40/46]  eta: 0:00:04  lr: 0.000500  loss: 0.8938 (0.9815)  classification: 0.5300 (0.5656)  bbox_regression: 0.3790 (0.4159)  time: 0.7212  data: 0.0069  max mem: 11187
+Epoch: [1]  [45/46]  eta: 0:00:00  lr: 0.000500  loss: 0.9186 (0.9754)  classification: 0.5193 (0.5595)  bbox_regression: 0.3945 (0.4159)  time: 0.7223  data: 0.0064  max mem: 11187
+Epoch: [1] Total time: 0:00:36 (0.7938 s / it)
+metric logger avg stats:  lr: 0.000500  loss: 0.9186 (0.9754)  classification: 0.5193 (0.5595)  bbox_regression: 0.3945 (0.4159)
+0.9186 (0.9754)
+Test:  [  0/529]  eta: 0:21:24  model_time: 0.1314 (0.1314)  evaluator_time: 0.0045 (0.0045)  time: 2.4284  data: 2.2914  max mem: 11187
+Test:  [100/529]  eta: 0:00:39  model_time: 0.0632 (0.0622)  evaluator_time: 0.0030 (0.0037)  time: 0.0684  data: 0.0007  max mem: 11187
+Test:  [200/529]  eta: 0:00:26  model_time: 0.0723 (0.0644)  evaluator_time: 0.0030 (0.0032)  time: 0.0784  data: 0.0009  max mem: 11187
+Test:  [300/529]  eta: 0:00:17  model_time: 0.0625 (0.0642)  evaluator_time: 0.0022 (0.0030)  time: 0.0669  data: 0.0009  max mem: 11187
+Test:  [400/529]  eta: 0:00:09  model_time: 0.0597 (0.0648)  evaluator_time: 0.0035 (0.0030)  time: 0.0664  data: 0.0008  max mem: 11187
+Test:  [500/529]  eta: 0:00:02  model_time: 0.0703 (0.0650)  evaluator_time: 0.0020 (0.0030)  time: 0.0762  data: 0.0011  max mem: 11187
+Test:  [528/529]  eta: 0:00:00  model_time: 0.0681 (0.0652)  evaluator_time: 0.0020 (0.0031)  time: 0.0819  data: 0.0009  max mem: 11187
+Test: Total time: 0:00:40 (0.0757 s / it)
+Averaged stats: model_time: 0.0681 (0.0652)  evaluator_time: 0.0020 (0.0031)
+Accumulating evaluation results...
+DONE (t=0.60s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.080
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.183
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.048
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.041
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.088
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.265
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.364
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.381
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.190
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.401
+Epoch: [2]  [ 0/46]  eta: 0:02:38  lr: 0.000500  loss: 0.6827 (0.6827)  classification: 0.3642 (0.3642)  bbox_regression: 0.3185 (0.3185)  time: 3.4477  data: 2.4488  max mem: 11187
+Epoch: [2]  [20/46]  eta: 0:00:22  lr: 0.000500  loss: 0.8396 (0.8355)  classification: 0.4433 (0.4625)  bbox_regression: 0.3749 (0.3730)  time: 0.7409  data: 0.0066  max mem: 11187
+Epoch: [2]  [40/46]  eta: 0:00:04  lr: 0.000500  loss: 0.8285 (0.8370)  classification: 0.4503 (0.4645)  bbox_regression: 0.3720 (0.3725)  time: 0.7562  data: 0.0068  max mem: 11200
+Epoch: [2]  [45/46]  eta: 0:00:00  lr: 0.000500  loss: 0.8508 (0.8329)  classification: 0.4752 (0.4609)  bbox_regression: 0.3801 (0.3720)  time: 0.7454  data: 0.0065  max mem: 11200
+Epoch: [2] Total time: 0:00:37 (0.8119 s / it)
+metric logger avg stats:  lr: 0.000500  loss: 0.8508 (0.8329)  classification: 0.4752 (0.4609)  bbox_regression: 0.3801 (0.3720)
+0.8508 (0.8329)
+Test:  [  0/529]  eta: 0:22:07  model_time: 0.1229 (0.1229)  evaluator_time: 0.0040 (0.0040)  time: 2.5092  data: 2.3813  max mem: 11200
+Test:  [100/529]  eta: 0:00:38  model_time: 0.0646 (0.0615)  evaluator_time: 0.0020 (0.0032)  time: 0.0700  data: 0.0010  max mem: 11200
+Test:  [200/529]  eta: 0:00:26  model_time: 0.0656 (0.0636)  evaluator_time: 0.0030 (0.0030)  time: 0.0710  data: 0.0011  max mem: 11200
+Test:  [300/529]  eta: 0:00:17  model_time: 0.0619 (0.0640)  evaluator_time: 0.0020 (0.0028)  time: 0.0647  data: 0.0008  max mem: 11200
+Test:  [400/529]  eta: 0:00:09  model_time: 0.0622 (0.0638)  evaluator_time: 0.0030 (0.0028)  time: 0.0683  data: 0.0009  max mem: 11200
+Test:  [500/529]  eta: 0:00:02  model_time: 0.0636 (0.0637)  evaluator_time: 0.0020 (0.0027)  time: 0.0675  data: 0.0010  max mem: 11200
+Test:  [528/529]  eta: 0:00:00  model_time: 0.0636 (0.0637)  evaluator_time: 0.0020 (0.0027)  time: 0.0684  data: 0.0010  max mem: 11200
+Test: Total time: 0:00:39 (0.0738 s / it)
+Averaged stats: model_time: 0.0636 (0.0637)  evaluator_time: 0.0020 (0.0027)
+Accumulating evaluation results...
+DONE (t=0.55s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.119
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.257
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.100
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.130
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.129
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.300
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.277
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.436
+Training time 0:03:59
+Creating model
